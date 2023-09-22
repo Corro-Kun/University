@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.root nav{
+    display: flex;
+    padding: 5px 30px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.logo{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.title{
+    text-align: center;
+    width: 500px;
+}
+.link{
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    transition: .5s;
+}
+.link a:hover{
+    color: orange;
+}
+.Formularios{
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    width: 99%;
+    height: 84vh;
+    flex-wrap: wrap;
+}
+
+.Datos-izquierda{
+    display: flex;
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.calendario{
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    height: 40%;
+    border: 1px solid black;
+}
+.calendario ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+}
+.calendario li{
+    text-align: right;
+}
+.first-day{
+    grid-column-start: 5;
+}
+.day-name{
+    background-color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+}
+.login{
+    display: flex;
+    width: 90%;
+    height: 60%;
+    border: 1px solid black;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.inputs-login{
+    padding: 30px 30px 30px 30px;
+}
+.input-login{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid orange;
+    margin: 30px 0;
+}
+.input-login input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px   ;
+}
+.input-login label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-login input:focus~label,
+.input-login input:valid~label {
+    top: -10px;
+    font-size: 0.9em;
+}
+.botones-login{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.botones-login button{
+    margin: 0 10px;
+    padding: 10px 12px 10px 12px;
+    background-color: orange;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.Datos-derecha{
+    padding: 10px 30px;
+    display: flex;
+    margin-top: 10px;
+    width: 68%;
+    height: calc(98% - 3px);
+    border: 1px solid black;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Sesiones{
+    display: flex;
+    width: 30%;
+    height: 49%;
+    align-items: center;
+    justify-content: center;
+}
+.Contenido-inputs{
+    width: 90%;
+    height: 90%;
+}
+/* Modifica el max-width para celulares */
+@media (max-width: 400px) {
+    .title{
+        display: none;
+    }
+    .root nav{
+        display: flex;
+        padding: 5px 5px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+    .logo{
+        height: 70px;
+        width: 70px;
+    }
+    .Formularios{
+        margin: 0;
+        height: auto;
+        flex-wrap: unset;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        overflow: auto ;
+    }
+    .Datos-derecha{
+        padding: 0;
+        height: auto;
+        width: 99%;
+        flex-wrap: unset;
+        flex-direction: column;
+    }
+    .Sesiones{
+        width: 99%;
+    }
+    .Datos-izquierda{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 1px;
+        width: 99%;
+        height: auto;
+    }
+    .login{
+        width: 90%;
+        height: auto;
+    }
+
+}

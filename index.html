@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="root" > 
+            <nav class="Bar-Main" >
+                <div class="img-logo" >
+                    <img src="./assets/logo.jpg" alt="logo" loading="lazy">
+                </div>
+                <samp class="button-icon" ><ion-icon name="list-outline"></ion-icon></samp>
+            </nav>
+            <div class="Main-Div" >
+                <div class="logo" >
+                    <video loop autoplay muted >
+                        <source src="./assets/logoAnimate.mp4" ></source>
+                    </video>
+                </div>
+                <p>centro de desarrollo <span class="multiText"></span></p>
+            </div>
+            <div class="right-Bar" >
+                <nav>
+                    <h2>Sesiones</h2>
+                    <h2 class="button-close" ><ion-icon name="close-outline"></ion-icon></h2>
+                </nav>
+                <div class="SesionesReenvios" >
+                    <ul>
+                        <a href="./insumos/electronica" >Insumos Electronica</a>
+                    </ul>
+                    <ul>
+                        <a href="./insumos/química" >Insumos Química</a>
+                    </ul>
+                    <ul>
+                        <a href="./investigación/química" >Investigación Química</a>
+                    </ul>
+                    <ul>
+                        <a href="./insumos/chia" >Insumos Chia</a>
+                    </ul>
+                    <ul>
+                        <a href="./investigación/chia" >Investigación Chia</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings : ["tecnológico","innovador"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        })
+    </script>
+    <script src="./main.js"></script>
+</html>
